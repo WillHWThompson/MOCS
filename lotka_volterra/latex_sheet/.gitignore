@@ -1,0 +1,7 @@
+.DS_Store
+*/.DS_Store
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz

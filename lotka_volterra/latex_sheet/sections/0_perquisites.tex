@@ -1,0 +1,51 @@
+\section{Lotka-Volterra 4th Equilibrium}
+\subsection{Perquisites}
+Taking the video lectures into account, we have the continuous dynamics of 2 competing species in the form of logistic growth models.
+
+\begin{equation}
+  \begin{split}
+    &\text{Lotka-Volterra} =
+    \begin{cases}
+      \dot N_1 &= r_1 N_1 \left( \frac {K_1 - N_1 - \alpha_2 N_2} {K_1} \right) \\
+      \dot N_2 &= r_2 N_2 \left( \frac {K_2 - N_2 - \alpha_1 N_1} {K_2} \right)
+    \end{cases} \\
+    &\text{where}
+    \begin{cases}
+      a_{12} \equiv \alpha_2 \frac {r_1} {K_1} \\
+      a_{12} \equiv \alpha_1 \frac {r_2} {K_2}
+    \end{cases} \\
+  \end{split}
+\end{equation}
+
+with the following variables,
+
+\begin{itemize}
+  \item $i$: species ID
+  \item $r_i$: population growth rate for species $i$
+  \item $N_i$: population of species $i$
+  \item $K_i$: population maximum capacity
+  \item $a_{ij}$: interaction between species $i$ and species $j$
+  (predation and reproduction)
+\end{itemize}
+
+Nullclines for $\dot N_1 = 0$ and $\dot N_2 = 0$ are,
+\begin{itemize}
+  \item [] For $\dot N_1 = 0$,
+  \begin{itemize}
+    \item $N_1^* = 0$ (species $1$ is extinct)
+    \item $N_1^{**} = K_1 - \alpha_2 N_2$
+  \end{itemize}
+  \item [] For $\dot N_2 = 0$,
+  \begin{itemize}
+    \item $N_2^* = 0$ (species $2$ is extinct)
+    \item $N_2^{**} = K_2 - \alpha_1 N_1$
+  \end{itemize}
+\end{itemize}
+
+with $*$ and $**$ signifying 2 solutions. The same rule applies to the rest of the paper.
+
+The uncoupled fixed points are the following.
+\begin{align}
+  N_1^{**} &= \frac {K_1 - \alpha_2 K_2} {1-\alpha_2 \alpha_1} \\
+  N_2^{**} &= \frac {K_2 - \alpha_1 K_1} {1-\alpha_1 \alpha_2}
+\end{align}
