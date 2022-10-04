@@ -28,7 +28,7 @@ end
 
 function ODESolver(equation,initial_conditions,params,max_time,num_steps=1000,integrator_method=heuns_method) 
     ΔT= max_time/num_steps#calculate the time interval of each step
-    time_range = collect(0:num_steps)
+    time_range = collect(0:ΔT:max_time)
     x_values = []
 
     x = initial_conditions 
