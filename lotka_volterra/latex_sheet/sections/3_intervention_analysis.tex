@@ -14,14 +14,23 @@ $$ \textbf{N'} = \begin{bmatrix}N_1' \\ N_2'\end{bmatrix}$$
 
 Since $\textbf{N}$ is multiplied by a scalar, $\textbf{N'}$ will have the same direction as $\textbf{N}$, but a smaller magnitude. 
 
-From the initial wording of the question we know that $N1$ goes to 0. The region of the phase space for which this is the case is the region in which 
+From the initial wording of the question we know that $N1$ goes to 0. In order for an intervention to be successful the scaled $\textbf{N'}$ must fall within a region such that the evolution will not cause the population of  $N_1$ to go to 0. Fig \ref{fig:phase_flow} depicts this process. 
+
+This is not possible for the following reason. The derivative $\dot{N_1} $ constantly decreases going from positive to negative as it crossed the $N_1$ nullcline. An intervention can change the magnitude of $\textbf{N}$ but not the direction so the resulting intervention will pull $\textbf{N}$ the same distance or closer towards $N_1 = 0$. As a result no intervention and no value of rho can prevent the population of species 1 from collapsing. 
 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width = \textwidth]{fig/graph_003.png}
-  \caption {Vector space around the equilibrium in the Lotka-Volterra model when Equation \ref{equ:constraints} is met, derived from Figure \ref{fig:vecspace} . The dotted gray arrows indicate the direction of the vector after combining the previous 2 arrows.}
-  \label{fig:equilibrium_stability}
+  \includegraphics[width = \textwidth]{fig/graph_004.png}
+  \caption {A phase flow diagram of the Lotka Volterra Model, the state of the system at any time is specified by a vector $\vec{N}$, the reduction by rho then corresponds to multiplying this vector by a scalar quantity $\rho$ to a resulting vector $\vec{N'}$}. 
+  \label{fig:phase_flow}
 \end{figure}
 
-As we can see from the figure, the equilibrium is a saddle point, where it is stable in one axis and unstable in its orthogonal axis.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = \textwidth]{fig/graph_005.png}
+  \caption {The result of an intervention by reducing the population by $\rho$. The state begins at $\vec{N_1}$ and evolves forward in time. The system evolves in time forward crossing the nullcline to into the region on the top right.}. 
+  \label{fig:phase_flow_intervention}
+\end{figure}
+
